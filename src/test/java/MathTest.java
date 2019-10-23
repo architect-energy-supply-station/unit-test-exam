@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * https://www.jianshu.com/p/6178bb936e74
@@ -9,9 +10,10 @@ import org.junit.Assert;
  */
 public class MathTest {
 
-	public static void main(String[] args) {
+	@Test
+	public void testLambda() {
 		MathOperatioin add = ((a, b) -> a + b);
-		Assert.assertEquals(9,LambdaBasic.operation(4, 5, add));
+		Assert.assertEquals(9, LambdaBasic.operation(4, 5, add));
 
 
 		MathOperatioin differ = ((a, b) -> a - b);
@@ -21,8 +23,7 @@ public class MathTest {
 		Assert.assertEquals(18, LambdaBasic.operation(3, 6, multiple));
 
 		MathOperatioin division = ((a, b) -> a / b);
-		Assert.assertEquals(5,LambdaBasic.operation(15,3,division));
-
+		Assert.assertEquals(5, LambdaBasic.operation(15, 3, division));
 	}
 
 }
