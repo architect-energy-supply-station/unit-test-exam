@@ -11,17 +11,25 @@ import org.junit.Test;
 public class MathTest {
 
 	@Test
-	public void testLambda() {
+	public void add(){
 		MathOperatioin add = ((a, b) -> a + b);
 		Assert.assertEquals(9, LambdaBasic.operation(4, 5, add));
+	}
 
-
+	@Test
+	public void differ(){
 		MathOperatioin differ = ((a, b) -> a - b);
 		Assert.assertEquals(4, LambdaBasic.operation(11, 7, differ));
+	}
 
+	@Test
+	public void multiple(){
 		MathOperatioin multiple = ((a, b) -> a * b);
 		Assert.assertEquals(18, LambdaBasic.operation(3, 6, multiple));
+	}
 
+	@Test
+	public void division(){
 		MathOperatioin division = ((a, b) -> a / b);
 		Assert.assertEquals(5, LambdaBasic.operation(15, 3, division));
 	}
